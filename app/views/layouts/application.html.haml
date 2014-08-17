@@ -1,21 +1,22 @@
 !!!
 %html
   %head
-    %title Smithsonian
+    %title Museum Project
     %link{href: "styles.css", rel: "stylesheet", type: "text/css"}/
     %link{href: "http://fonts.googleapis.com/css?family=Great+Vibes", rel: "stylesheet", type: "text/css"}/
     %link{href: "http://fonts.googleapis.com/css?family=Arvo:400,700,400italic,700italic", rel: "stylesheet", type: "text/css"}/
-<<<<<<< HEAD
-    %title Museum Index
+
+  %title Museum Index
+
   %body
-=======
+
   = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
   = javascript_include_tag 'application', 'data-turbolinks-track' => true
   = csrf_meta_tags
 
     
   %body
-    %h1 The Smithsonian Institute
+    %h1 THE MINERAL RESEARCH INSTITUTE
   / Fixed navbar
   .navbar.navbar-default.navbar-fixed-top{role: "navigation"}
     .container
@@ -25,32 +26,22 @@
           %span.icon-bar
           %span.icon-bar
           %span.icon-bar
-        %a.navbar-brand{href: "#"} Home
+        %a.navbar-brand{href: "/"} Home
       .collapse.navbar-collapse
         %ul.nav.navbar-nav
           %li.active
-            %a{href: "#"} Museums
+            %a{href: "#{smithsonians_path}"} Museums
           %li
-            %a{href: "#about"} Minerals
+            %a{href: "#{smithsonian_minerals_path(:smithsonian_id)}"} Minerals
           %li
-            %a{href: "#contact"} Scientists
+            %a{href: "#{smithsonian_mineral_scientists_path(:mineral_id, :smithsonian_id)}"} Scientists
         
       / /.nav-collapse
   / Begin page content
-  .container
-    .page-header
-      %h1 Sticky footer with fixed navbar
-    %p.lead
-      Pin a fixed-height footer to the bottom of the viewport in desktop browsers with this custom HTML and CSS. A fixed navbar has been added with
-      %code padding-top: 60px;
-      on the
-      = succeed "." do
-        %code body > .container
-    %p
-      Back to
-      %a{href: "../sticky-footer"} the default sticky footer
-      minus the navbar.
-
+  .content
+    
+  
+   
   = yield
   .footer
     .container
@@ -61,5 +52,5 @@
   / Placed at the end of the document so the pages load faster
   %script{src: "https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"}
   %script{src: "../../dist/js/bootstrap.min.js"}
->>>>>>> 4383a0b18f8790f882a51e50199362b73dcbc76e
+
   

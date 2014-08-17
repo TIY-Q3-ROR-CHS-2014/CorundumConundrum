@@ -2,7 +2,7 @@ class MineralsController < ApplicationController
 
   def index
     @minerals = Mineral.all
-    @smithsonian = Smithsonian.find params[:smithsonian_id]
+    @smithsonian = Smithsonian.find params[:smithsonian_id] 
   end
 
   def show
@@ -14,6 +14,7 @@ class MineralsController < ApplicationController
   def new
     @mineral = Mineral.new
     @smithsonian = Smithsonian.find params[:smithsonian_id]
+    @scientists = Scientist.all
   end
 
   def create
@@ -29,6 +30,7 @@ class MineralsController < ApplicationController
   def edit
     @mineral = mineral.find params[:id]
     @smithsonian = Smithsonian.find params[:smithsonian_id]
+    @scientists = Scientist.all
   end
 
   def update
@@ -67,11 +69,11 @@ class MineralsController < ApplicationController
   private
 
   def mineral_params
-    params.require(:mineral).permit(#GET THESE)
+    params.require(:mineral).permit(:name, :moh, :origin, scientist_ids: [])
   end
 
   def scientist_params
-      params.require(:scientist).permit(#GET THESE)
+      params.require(:scientist).permit(:name, :institution)
   end
 
 end

@@ -1,0 +1,14 @@
+%h1 Our current Minerals
+
+- @minerals.each do |mineral|
+  = mineral.name
+  = mineral.institution
+  = link_to 'Show', mineral
+  = link_to 'Edit', edit_mineral_path(@smithsonian, mineral)
+  = link_to 'Destroy', mineral, method: :delete
+
+%br
+
+= link_to "Add Mineral",
+  new_smithsonian_mineral_path(@smithsonian, @mineral)
+= link_to 'Back', root_path

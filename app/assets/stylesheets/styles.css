@@ -9,7 +9,7 @@ padding-top: 60px; font-family: "Arvo";
 color: #757575; 
 text-align: center; 
 font-weight: 300; 
-text-shadow: 1px 1px 0px black; 
+text-shadow: 2px 2px 0px black; 
 letter-spacing: 2px; 
 font-height: 2px;
 }
@@ -17,8 +17,11 @@ font-height: 2px;
 body {
   /* Margin bottom by footer height */
 margin-bottom: 60px;
-font-family: "Arvo"; font-weight: 200px; color:  #f5f4e9;
-background-image: -webkit-gradient(linear, left bottom, right top, color-stop(0%, rgba(60, 24, 28, 0.9)), color-stop(100%, #0e0a2e));
+font-family: "Arvo"; 
+font-weight: 100px; 
+color:  #f5f4e9;
+font-size: 16px;
+background-image: -webkit-gradient(linear, left bottom, right top, color-stop(0%, rgba(60, 24, 28, 0.8)), color-stop(100%, #0e0a2e)), url(/assets/gemstones1.png);
 }
 body > .container {
 padding: 40px 15px 0;
@@ -43,19 +46,47 @@ padding: 40px 15px 0;
 /* Custom page CSS
 -------------------------------------------------- */
 /* Not required for template or sticky footer method. */
-
-body > .container {
-  padding: 60px 15px 0;
-}
 .container .text-muted {
   margin: 20px 0;
 }
+/* Custom default button */
+.btn-default,
+.btn-default:hover
+.btn-default: focus{
+  color: black;
+  text-shadow: none; /*do not inherit from 'body'*/
+  background-color: white;
+  border: 1px solid #fff;
+  position: center;
+  border-radius: 6px;
+}
+
+input{
+  color: #757575;
+}
+
 
 .footer > .container {
   padding-right: 15px;
   padding-left: 15px;
 }
-
+body > .container {
+  padding: 60px 15px 0;
+}
 code {
   font-size: 80%;
+}
+p{
+  font-size: 20px;
+  text-align: center;
+  padding-top: 80px;
+  padding-bottom: 30px;
+  margin-left:60px;
+  margin-right:60px;
+}
+a:link, a:visited {
+    color: white;
+}
+a:hover {
+    color: #757575;
 }

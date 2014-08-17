@@ -1,0 +1,26 @@
+= form_for [@smithsonian, @mineral] do |f|
+  - if @smithsonian.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@smithsonian.errors.count, "error")} prohibited this museum from being saved:"
+      %ul
+        - @smithsonian.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :name
+    = f.text_area :name
+  .field
+    = f.label :moh
+    = f.text_area :moh
+  .field
+    = f.label :origin
+    = f.text_area :origin
+  .field
+    %ul
+      - @scientists.each do |scientist|
+        %li
+          = check_box_tag 'mineral[scientist_ids][]', scientist.id, @mineral.scientists.include?(scientist)
+          = scientist.name 
+  .actions
+    = f.submit 'Save'
+      

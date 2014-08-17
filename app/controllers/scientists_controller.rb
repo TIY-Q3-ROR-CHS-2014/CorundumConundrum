@@ -1,6 +1,7 @@
 class ScientistsController < ApplicationController
 
   def index
+    @smithsonian = Smithsonian.find params[:smithsonian_id]
     @scientist = Scientist.all
     @mineral = Mineral.find params[:mineral_id]
   end
@@ -57,7 +58,7 @@ class ScientistsController < ApplicationController
   private
 
   def scientist_params
-    params.require(:scientist).permit(#DEFINE THESE TOMORROW)
+    params.require(:scientist).permit(:name, :institution)
   end
   
 end

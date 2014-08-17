@@ -1,15 +1,18 @@
 %h1 Our Museums!
-
-  - @smithsonian.each do |museum|
-    = museum.name
-    = museum.description
-    = link_to 'Show', smithsonian_path
-    = link_to 'Edit', edit_smithsonian_path(smithsonian)
-    = link_to 'Destroy', smithsonian, method: :delete
+- @smithsonians.each do |smithsonian|
+  %ul
+    %li
+      = smithsonian.name
+      %br
+      = smithsonian.description
+      = link_to '| Information |', smithsonian_path(smithsonian)
+      = link_to "Edit Information |", edit_smithsonian_path(smithsonian)
+      = link_to "Delete |", smithsonian_path(smithsonian), method: :delete
+      %br
 
 %br
 
-= link_to 'New Museum', new_smithsonian_path
+= link_to 'Add Your Museum/Smithsonian!', new_smithsonian_path
 = link_to 'Back', root_path
 
 
