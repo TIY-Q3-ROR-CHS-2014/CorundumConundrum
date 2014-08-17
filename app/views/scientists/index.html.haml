@@ -1,13 +1,13 @@
 %h1 Our current Scientists/Researchers
 
-  - @scientists.each do |scientist|
-    = scientist.name
-    = scientist.institution
-    = link_to 'Show', scientist
-    = link_to 'Edit', edit_scientist_path(scientist)
-    = link_to 'Destroy', scientist, method: :delete
+- @scientists.each do |scientist|
+  = scientist.name
+  = scientist.institution
+  = link_to 'Show', scientist
+  = link_to 'Edit', edit_scientist_path(scientist)
+  = link_to 'Destroy', scientist, method: :delete
 
 %br
 
-= link_to 'New scientist', new_scientist_path
+= link_to 'New scientist', new_smithsonian_mineral_scientist(@smithsonian, @mineral, scientist)
 = link_to 'Back', root_path

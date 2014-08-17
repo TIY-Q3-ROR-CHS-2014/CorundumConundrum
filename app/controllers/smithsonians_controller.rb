@@ -14,7 +14,7 @@ class SmithsoniansController < ApplicationController
   end
 
   def create
-    @smithsonian = Smithsonian.new smithsonian_params
+    @smithsonian = Smithsonian.create smithsonian_params
     if @smithsonian.save
     redirect_to smithsonians_path
     else 
@@ -56,6 +56,7 @@ class SmithsoniansController < ApplicationController
   def smithsonian_params
     params.require(:smithsonian).permit(:name, :description)
   end
+
 
   def mineral_params
     params.require(:mineral).permit(:name, :moh, :origin)
