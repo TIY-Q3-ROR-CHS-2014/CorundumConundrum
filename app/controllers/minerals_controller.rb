@@ -8,10 +8,12 @@ class MineralsController < ApplicationController
     @smithsonian = Smithsonian.find params[:smithsonian_id]
     @mineral = Mineral.find params[:id]
     @scientist = @mineral.scientists.new
+    # uploader = AvatarUploader.new
   end
 
   def new
     @mineral = Mineral.new
+    # uploader = AvatarUploader.new
     @smithsonian = Smithsonian.find params[:smithsonian_id]
     @scientists = Scientist.all
   end
