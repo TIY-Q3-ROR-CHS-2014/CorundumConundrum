@@ -4,13 +4,24 @@
 %b Description:
 = @smithsonian.description
 %br
+= link_to 'Edit Museum', edit_smithsonian_path(@smithsonian)
+%br
+%br
 %br
 = link_to "Add Mineral to this Museum!",
   new_smithsonian_mineral_path(@smithsonian, @mineral)
 %br
 %br
+%strong
+  Minerals
+%ul
+  - @smithsonian.minerals.each do |mineral|
+    - if mineral.name
+      %li
+        = mineral.name
+        |
+        = mineral.moh
+        |
+        = mineral.origin
 
-= link_to 'Edit', edit_smithsonian_path(@smithsonian)
-%br
-= link_to 'Back', smithsonians_path  
-
+= link_to 'Back', smithsonians_path

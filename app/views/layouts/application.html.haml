@@ -16,7 +16,7 @@
 
     
   %body
-    %h1 THE MINERAL RESEARCH INSTITUTE
+    %h1 The Mineral Research Institute
   / Fixed navbar
   .navbar.navbar-default.navbar-fixed-top{role: "navigation"}
     .container
@@ -32,9 +32,9 @@
           %li.active
             %a{href: "#{smithsonians_path}"} Museums
           %li
-            %a{href: "#{smithsonian_minerals_path(:smithsonian_id)}"} Minerals
+            %a{href: "#{smithsonian_minerals_path(@smithsonian, mineral)}"} Minerals
           %li
-            %a{href: "#{smithsonian_mineral_scientists_path(:mineral_id, :smithsonian_id)}"} Scientists
+            %a{href: "#{smithsonian_mineral_scientists_path(@smithsonian, @mineral, scientist)}"} Scientists
         
       / /.nav-collapse
   / Begin page content

@@ -5,13 +5,16 @@ html {
   min-height: 100%;
 }
 h1{
-padding-top: 60px; font-family: "Arvo"; 
+padding-top: 60px; 
+font-family: "Arvo"; 
 color: #757575; 
 text-align: center; 
 font-weight: 300; 
 text-shadow: 2px 2px 0px black; 
 letter-spacing: 2px; 
 font-height: 2px;
+margin-left: 50px;
+
 }
 
 body {
@@ -78,15 +81,21 @@ code {
 }
 p{
   font-size: 20px;
-  text-align: center;
+  text-align: left;
   padding-top: 80px;
   padding-bottom: 30px;
-  margin-left:60px;
-  margin-right:60px;
+  margin-left: 50px;
 }
 a:link, a:visited {
     color: white;
 }
 a:hover {
     color: #757575;
+}
+h2{
+  font-family: "Great Vibes", cursive;
+  text-align: left;
+  color: #757575;
+  margin-top: 40px;
+  margin-left: 50px;
 }

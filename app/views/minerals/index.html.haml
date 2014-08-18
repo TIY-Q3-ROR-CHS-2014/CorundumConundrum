@@ -2,10 +2,11 @@
 
 - @minerals.each do |mineral|
   = mineral.name
-  = mineral.institution
-  = link_to 'Show', mineral
+  = mineral.moh
+  = mineral.origin
+  = link_to 'Show', smithsonian_mineral_path(@smithsonian, mineral)
   = link_to 'Edit', edit_mineral_path(@smithsonian, mineral)
-  = link_to 'Destroy', mineral, method: :delete
+  = link_to 'Destroy', smithsonian_mineral_path, method: :delete
 
 %br
 
