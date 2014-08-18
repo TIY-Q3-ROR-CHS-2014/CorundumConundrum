@@ -1,8 +1,8 @@
 /* Sticky footer styles
 -------------------------------------------------- */
 html {
-  position: relative;
-  min-height: 100%;
+position: relative;
+min-height: 100%;
 }
 h1{
 padding-top: 60px; 
@@ -16,15 +16,30 @@ font-height: 2px;
 margin-left: 50px;
 
 }
+h2{
+  font-family: "Great Vibes", cursive;
+  text-align: left;
+  color: gray;
+  margin-top: 40px;
+  margin-left: 50px;
+}
+h3{
+  padding-top: 40px; 
+  font-family: "Arvo"; 
+  color: #757575; 
+  text-align: left;
+}
+
 
 body {
   /* Margin bottom by footer height */
+margin-left: 20px;
 margin-bottom: 60px;
 font-family: "Arvo"; 
 font-weight: 100px; 
 color:  #f5f4e9;
 font-size: 16px;
-background-image: -webkit-gradient(linear, left bottom, right top, color-stop(0%, rgba(60, 24, 28, 0.8)), color-stop(100%, #0e0a2e)), url(/assets/gemstones1.png);
+background-image: -webkit-gradient(linear, left bottom, right top, color-stop(0%, rgba(60, 24, 28, 0.9)), color-stop(100%, #0e0a2e)), url(/assets/gemstones1.png);
 }
 body > .container {
 padding: 40px 15px 0;
@@ -65,7 +80,10 @@ padding: 40px 15px 0;
 }
 
 input{
-  color: #757575;
+  color: black;
+}
+img{
+  border-radius: 10px;
 }
 
 
@@ -92,10 +110,4 @@ a:link, a:visited {
 a:hover {
     color: #757575;
 }
-h2{
-  font-family: "Great Vibes", cursive;
-  text-align: left;
-  color: #757575;
-  margin-top: 40px;
-  margin-left: 50px;
-}
+

@@ -2,6 +2,7 @@ class MineralsController < ApplicationController
 
   def index
     @minerals = Mineral.all
+    @scientists = Scientist.all
   end
 
   def show

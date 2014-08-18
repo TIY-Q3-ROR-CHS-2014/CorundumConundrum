@@ -1,18 +1,19 @@
-%h1 Our Museums!
+%h3 Community Museums
 - @smithsonians.each do |smithsonian|
   %ul
     %li
       = smithsonian.name
       %br
       = smithsonian.description
-      = link_to '| Information |', smithsonian_path(smithsonian)
+      = link_to '| Minerals|', smithsonian_path(smithsonian)
       = link_to "Edit Information |", edit_smithsonian_path(smithsonian)
       = link_to "Delete |", smithsonian_path(smithsonian), method: :delete
       %br
 
 %br
-
-= link_to 'Add Your Museum/Smithsonian!', new_smithsonian_path
+= link_to 'Want to add your museum to our community?', new_smithsonian_path
+%br
+%br
 = link_to 'Back', root_path
 
 
