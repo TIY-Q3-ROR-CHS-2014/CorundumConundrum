@@ -4,15 +4,14 @@
 
 %ul
   - @scientists.each do |scientist|
-    %li
-      = scientist.name
-      |
-      = scientist.institution
-      |
-      = link_to '| Show ', scientist
-      = link_to '| Edit ', edit_scientist_path(scientist)
-      = link_to '| Dismiss |', scientist, method: :delete
-      
+    = scientist.name
+    = scientist.institution
+    %br
+    = link_to 'Show ', scientist
+    = link_to 'Edit ', edit_scientist_path(scientist)
+    = link_to 'Dismiss', scientist, method: :delete
+    %br
+    %br
 
 %br
 %br

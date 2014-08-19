@@ -5,7 +5,6 @@ class SmithsoniansController < ApplicationController
   end
 
   def show
-
     @smithsonian = Smithsonian.find params[:id]
     @mineral = @smithsonian.minerals.new
   end

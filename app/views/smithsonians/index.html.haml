@@ -1,13 +1,13 @@
 %h3 Community Museums
 - @smithsonians.each do |smithsonian|
   %ul
-    %li
+    %div
       = smithsonian.name
-      %br
       = smithsonian.description
-      = link_to '| Minerals|', smithsonian_path(smithsonian)
-      = link_to "Edit Information |", edit_smithsonian_path(smithsonian)
-      = link_to "Delete |", smithsonian_path(smithsonian), method: :delete
+      %br
+      = link_to 'Mineral Collection', smithsonian_path(smithsonian)
+      = link_to "Edit Information", edit_smithsonian_path(smithsonian)
+      = link_to "Delete", smithsonian_path(smithsonian), method: :delete
       %br
 
 %br
