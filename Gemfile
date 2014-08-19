@@ -41,5 +41,7 @@ gem 'spring',        group: :development
 gem 'html2haml'
 gem 'haml-rails'
 gem 'quiet_assets'
-gem 'carrierwave'
+gem "paperclip", "~> 4.1"
+
 gem 'devise'
+
