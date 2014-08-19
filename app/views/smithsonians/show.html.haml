@@ -26,6 +26,9 @@
         %strong
         Origin:
         = mineral.origin
+        = link_to 'Show ', smithsonian_mineral_path(@smithsonian, mineral)
+        = link_to 'Edit ', edit_smithsonian_mineral_path(@smithsonian, mineral)
+        = link_to 'Delete', smithsonian_mineral_path(@smithsonian, mineral), method: :delete
     / %div
     /   = link_to "Edit" edit_smithsonian_mineral_path(@smithsonian, mineral)
     /   %br
