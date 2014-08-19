@@ -1,5 +1,5 @@
 class MineralsController < ApplicationController
-
+  before_action :authenticate_user!, only: [:show, :new, :edit, :update, :destroy]
   def index
     @minerals = Mineral.all
     @scientists = Scientist.all
@@ -67,12 +67,18 @@ class MineralsController < ApplicationController
     redirect_to smithsonian_mineral_path(@smithsonian, @mineral)
   end
     
-
+  # def uploader
+  #   file = File.open('example.jpg')
+  #   uploader = MyUploader.new
+  #   uploader.store!(file)
+  # end
   private
 
   def mineral_params
-    params.require(:mineral).permit(:name, :moh, :origin, scientist_ids: [])
+    params.require(:mineral).permit(:name, :moh, :origin, :avatar, scientist_ids: [])
   end
+
+  
 
   def scientist_params
       params.require(:scientist).permit(:name, :institution)

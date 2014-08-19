@@ -1,5 +1,5 @@
 class SmithsoniansController < ApplicationController
-
+  before_action :authenticate_user!, only: [:show, :new, :edit, :update, :destroy]
   def index
     @smithsonians = Smithsonian.all
   end

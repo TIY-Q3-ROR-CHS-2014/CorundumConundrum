@@ -19,6 +19,8 @@
         = mineral.moh
         |
         = mineral.origin.capitalize
+        |
+        = image_tag mineral.avatar.url
 %br
 = link_to "Add a new mineral",
   new_smithsonian_mineral_path(@smithsonian, @mineral)

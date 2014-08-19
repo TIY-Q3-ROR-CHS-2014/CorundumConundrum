@@ -1,4 +1,4 @@
-= form_for [@smithsonian, @mineral] do |f|
+= form_for [@smithsonian, @mineral], :html => { :multipart => true } do |f|
   - if @smithsonian.errors.any?
     #error_explanation
       %h2= "#{pluralize(@smithsonian.errors.count, "error")} prohibited this museum from being saved:"
@@ -14,6 +14,11 @@
   .field
     = f.label :origin
     = f.text_field :origin
+  / .field
+  /   = f.label :minerals
+  .field
+    = f.label :avatar
+    = f.file_field :avatar
   .field
     %br
     Assign Researcher to this mineral!

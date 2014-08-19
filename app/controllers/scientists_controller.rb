@@ -1,5 +1,5 @@
 class ScientistsController < ApplicationController
-
+  before_action :authenticate_user!, only: [:show, :new, :edit, :update, :destroy]
   def index
     @scientists = Scientist.all
   end

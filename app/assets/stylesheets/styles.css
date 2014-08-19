@@ -86,6 +86,9 @@ img{
   border-radius: 10px;
 }
 
+.pull-right{
+color: #A4A4A4;
+}
 
 .footer > .container {
   padding-right: 15px;
@@ -105,9 +108,17 @@ p{
   margin-left: 50px;
 }
 a:link, a:visited {
-    color: white;
+    color: #A4A4A4;
 }
 a:hover {
     color: #757575;
+}
+.alert{
+  padding: 0px;
+  margin: 0px;
+}
+.notice{
+  padding: 0px;
+  margin: 0px;
 }
 
