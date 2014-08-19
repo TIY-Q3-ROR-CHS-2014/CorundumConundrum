@@ -1,12 +1,13 @@
-%b Name:
-= @mineral.name
+- @smithsonian.minerals.each do |scientist|
+  %b Name:
+  = @mineral.name
 
-%b Mohs Scale:
-= @mineral.moh
+  %b Mohs Scale:
+  = @mineral.moh
 
-%b Place of Origin:
-= @mineral.origin
+  %b Place of Origin:
+  = @mineral.origin
 
-= link_to 'Edit', edit_scientist_path(@scientist)
+  = link_to 'Edit', edit_scientist_path(scientist)
 
 = link_to 'Back', scientists_path

@@ -28,13 +28,13 @@ class MineralsController < ApplicationController
   end
 
   def edit
-    @mineral = mineral.find params[:id]
+    @mineral = Mineral.find params[:id]
     @smithsonian = Smithsonian.find params[:smithsonian_id]
     @scientists = Scientist.all
   end
 
   def update
-    @mineral = mineral.find params[:id]
+    @mineral = Mineral.find params[:id]
     @smithsonian = Smithsonian.find params[:smithsonian_id]
     if @mineral.update_attributes mineral_params
       redirect_to smithsonians_path  
@@ -44,7 +44,7 @@ class MineralsController < ApplicationController
   end
 
   def destroy
-    @mineral = mineral.find params[:id]
+    @mineral = Mineral.find params[:id]
     @smithsonian = Smithsonian.find params[:smithsonian_id]
     @mineral.delete
     redirect_to smithsonians_path
